@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 
 class dbClient {
   constructor() {
-    const queryString = `mongodb+srv://${process.env.USER_DB}:${process.env.PASS_DB}@${process.env.SERVER_DB}/?retryWrites=true&w=majority&appName=MascotasCRUD`;
+    const queryString = `mongodb+srv://${process.env.USER_DB}:${process.env.PASS_DB}@${process.env.SERVER_DB}/?retryWrites=true&w=majority&appName=${process.env.NAME_DB}`;
     this.client = new MongoClient(queryString);
     this.connectarBD();
   }
